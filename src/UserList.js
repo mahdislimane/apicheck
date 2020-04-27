@@ -7,7 +7,7 @@ export default function UserList() {
   const [listOfUser, setlistOfUser] = useState([]);
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
-      setlistOfUser(listOfUser.concat(res.data));
+      setlistOfUser(res.data);
     });
   }, []);
   console.log(listOfUser);
