@@ -15,7 +15,7 @@ export default function UserList() {
     <div className="container-fluid row">
       <div className="col-3"></div>
       <table className="col-6">
-        <tr className="form">
+        <tr className="form" key={0}>
           <th className="tableau" style={{ width: "50px" }}>
             ID
           </th>
@@ -29,7 +29,7 @@ export default function UserList() {
 
         {listOfUser.map((el) => {
           return (
-            <tr className="form">
+            <tr className="form" key={el.id}>
               <td className="tableau" style={{ width: "50px" }}>
                 {el.id}
               </td>
